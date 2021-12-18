@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Agenda</a>
+
+        <% if(!user) { %>
+            <span><a class="navbar-toggler fs-6 text-decoration-none" href="/login/index">Entrar</a></span>
+
+        <% }else{ %>
+            <span class="ms-5"><a class="navbar-toggler ms-5 fs-6 text-decoration-none " href="/contato/index">Add</a></span>
+            
+            <span><a class="navbar-toggler fs-6 text-decoration-none" href="/login/logout">Sair</a></span>
+            
+        <% } %>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                <% if(!user) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/index">Entrar</a>
+                    </li>
+                <% }else { %>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contato/index">Cadastrar contatos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/logout">Sair</a>
+                    </li>
+
+                <% }; %>
+
+            </ul>
+        </div>
+    </div>
+</nav>
